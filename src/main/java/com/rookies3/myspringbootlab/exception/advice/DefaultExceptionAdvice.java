@@ -85,11 +85,11 @@ public class DefaultExceptionAdvice {
 
         ValidationErrorResponse response =
                 new ValidationErrorResponse(
-                        400,
-                        "입력항목 검증 오류",
-                        LocalDateTime.now(),
-                        errors
-                );
+                400,
+                "입력항목 검증 오류",
+                LocalDateTime.now(),
+                errors
+        );
         //badRequest() 400
         return ResponseEntity.badRequest().body(response);
     }
